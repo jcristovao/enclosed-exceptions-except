@@ -3,8 +3,8 @@
 {-# LANGUAGE NoMonomorphismRestriction  #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
--- | @enclosed-exception-either@ is a complement to Michael Snoyman' excelent
---   @enclosed-exception@ package, allowing you to run an IO computation that
+-- | @enclosed-exception-except@ is a complement to Michael Snoyman' excelent
+--   "enclosed-exception" package, allowing you to run an IO computation that
 --   may raise exceptions and convert it to an 'ExceptT e IO a' value, while
 --   still remaining responsive to external asynchronous exceptions.
 --
