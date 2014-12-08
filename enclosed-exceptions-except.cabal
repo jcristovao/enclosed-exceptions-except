@@ -1,7 +1,8 @@
-name:                enclosed-exceptions-either
-version:             0.1.4.0
-synopsis:            Run an enclosed exception raising computation and return and Either result
--- description:         
+name:                enclosed-exceptions-except
+version:             0.2.0.0
+synopsis:            Run an enclosed exception raising computation and return and ExceptT result
+description:         Run an (possibly) exception raising piece of code, 
+                     returning an ExceptT result, and still responsing to (external) async exceptions.
 homepage:            https://github.com/jcristovao/enclosed-exceptions-either
 license:             BSD3
 license-file:        LICENSE
@@ -13,15 +14,15 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Control.Exception.Enclosed.Either
+  exposed-modules:     Control.Exception.Enclosed.Except
   -- other-modules:       
   other-extensions:    FlexibleContexts, IncoherentInstances, NoMonomorphismRestriction
   build-depends:       base                >=4.6    && <4.8
                      , text                >=0.11   && <1.3
-                     , either              >=4.2    && <4.4
                      , deepseq             >=1.3    && <1.4
                      , monad-control       >=0.3    && <0.4
                      , enclosed-exceptions >=1.0    && <1.1
                      , lifted-base         >=0.2.2  && <0.3
+                     , transformers        >=0.4.1  && <0.5
   hs-source-dirs:      src
   default-language:    Haskell2010
